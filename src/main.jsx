@@ -10,6 +10,7 @@ import Bookmarks from './pages/Bookmarks.jsx';
 import Blog from './pages/Blog.jsx'
 import Content from './components/Content.jsx'
 import Author from './components/Author.jsx'
+import { Toaster } from 'react-hot-toast';
 
 
 const router = createBrowserRouter([
@@ -55,5 +56,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <>
     <RouterProvider router={router} />
+    <Toaster />
   </>
 )
