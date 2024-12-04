@@ -1,15 +1,16 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Hero from '../components/Hero'
 
 
 function Home() {
     return (
-        <div>
-            {/* Navbar */}
-            <div className='h-16'>
-                <Navbar />
+        <>
+            <div className='flex justify-center items-center'>
+                <Hero />
+
             </div>
-        </div>
+        </>
     )
 }
 

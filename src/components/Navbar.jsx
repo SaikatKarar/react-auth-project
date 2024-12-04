@@ -1,16 +1,17 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 function Navbar() {
     return (
-        <div className="navbar bg-base-100 shadow-lg px-4 fixed z-10">
+        <div className="navbar bg-base-100 shadow-lg px-4 sm:px-12 fixed z-10">
             <div className="flex-1">
-                <a className="btn btn-ghost gap-0 text-secondary normal-case text-2xl">Byte<span className='text-primary'>Blaze</span></a>
+                <Link to="/" className="btn btn-ghost gap-0 text-secondary normal-case text-2xl">Byte<span className='text-primary'>Blaze</span></Link>
             </div>
             <div className="flex-none">
-                <ul className="menu menu-horizontal px-1">
-                    <li className='font-bold'><a>Home</a></li>
-                    <li className='font-bold text-primary'><a>Blogs</a></li>
-                    <li className='font-bold'><a>Bookmarks</a></li>
+                <ul className="menu menu-horizontal px-1 hidden sm:flex sm:items-center gap-5">
+                    <NavLink to='/' className={({ isActive }) => isActive ? 'text-primary font-bold' : 'font-bold'}><a>Home</a></NavLink>
+                    <NavLink to='/blog' className={({ isActive }) => isActive ? 'text-primary font-bold' : 'font-bold'}><a>Blogs</a></NavLink>
+                    <NavLink to='/bookmarks' className={({ isActive }) => isActive ? 'text-primary font-bold' : 'font-bold'}><a>Bookmarks</a></NavLink>
                     <li>
                         <details>
                             <summary className='font-bold'>Parent</summary>
