@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, Outlet, useLoaderData } from 'react-router-dom';
 
 function Blog() {
-    const [tabbIndex, setTabIndex] = useState(0)
+    const [tabbIndex, setTabIndex] = useState(0);
     const blog = useLoaderData();
 
     const {
@@ -12,7 +12,7 @@ function Blog() {
         published_at,
         public_reactions_count,
     } = blog;
-    // console.log(title);
+
     return (
         <div className="max-w-2xl px-6 py-16 mx-auto space-y-12">
             <article className="space-y-8 text-gray-800">
