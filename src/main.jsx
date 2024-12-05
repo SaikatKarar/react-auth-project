@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-// import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Blogs from './pages/Blogs';
@@ -11,6 +10,9 @@ import Blog from './pages/Blog.jsx'
 import Content from './components/Content.jsx'
 import Author from './components/Author.jsx'
 import { Toaster } from 'react-hot-toast';
+import SignUp from './pages/SignUp.jsx'
+import Login from './pages/Login.jsx'
+import Dashboard from './pages/Dashboard.jsx'
 
 
 const router = createBrowserRouter([
@@ -48,7 +50,19 @@ const router = createBrowserRouter([
       {
         path: '/bookmarks',
         element: <Bookmarks />
-      }
+      },
+      {
+        path: '/signup',
+        element: <SignUp />
+      },
+      {
+        path: '/login',
+        element: <Login />
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard />
+      },
     ]
   },
 ])
